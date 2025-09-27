@@ -8,7 +8,6 @@
 <p align="center">
   <img src="https://img.shields.io/badge/STATUS-Finalizado-green" alt="Status: Finalizado"/>
   <img src="https://img.shields.io/badge/Linguagem-C-blue" alt="Linguagem: C"/>
-  <img src="https://img.shields.io/badge/Licença-MIT-lightgrey" alt="Licença: MIT"/>
 </p>
 
 <p align="center">
@@ -24,7 +23,7 @@
 
 ---
 
-## 📜 Visão Geral do Projeto
+## Visão Geral do Projeto
 
 O objetivo deste trabalho foi aplicar os conceitos fundamentais da linguagem **C** para criar uma aplicação funcional e organizada.  
 
@@ -42,7 +41,7 @@ Um Pokémon é derrotado quando sua vida chega a zero, e a partida termina quand
 
 ---
 
-## ✨ Funcionalidades
+## Funcionalidades
 
 - 🎮 **Batalha por turnos**: ataques, danos e substituições automáticas.  
 - 🔥 **Sistema de vantagens de tipo**: Água, Fogo, Pedra, Elétrico etc. influenciam no resultado.  
@@ -51,7 +50,7 @@ Um Pokémon é derrotado quando sua vida chega a zero, e a partida termina quand
 
 ---
 
-## ✔️ Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 - **Linguagem:** C  
 - **Compilador:** GCC (GNU Compiler Collection)  
@@ -59,7 +58,7 @@ Um Pokémon é derrotado quando sua vida chega a zero, e a partida termina quand
 
 ---
 
-## 🚀 Como Rodar o Projeto
+## Como Rodar o Projeto
 
 ### Pré-requisitos
 
@@ -109,7 +108,7 @@ gcc --version
 
 ---
 
-## 🏛️ Estrutura do Código
+## Estrutura do Código
 
 * **`struct POKEMON`** → define os atributos de cada criatura.
 * **`float calculaBonus(POKEMON p1, POKEMON p2)`** → aplica bônus/penalidade conforme o tipo.
@@ -122,7 +121,7 @@ gcc --version
 
 ---
 
-## 🖥️ Exemplo de Uso
+## Exemplo de Uso
 
 ```bash
 ./batalha_pokemon
@@ -144,12 +143,6 @@ Squirtle resistiu! Vida restante: 7
 
 ---
 
-## 📝 Licença
-
-Este projeto está sob a licença **MIT**.
-Consulte o arquivo [LICENSE](LICENSE.md) para mais detalhes.
-
----
 # Autora
 
 | [Sophia Vieira](https://github.com) |
