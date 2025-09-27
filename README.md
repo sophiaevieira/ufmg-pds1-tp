@@ -1,14 +1,14 @@
-<h1 align="center">👾 Projeto Batalha Pokémon 🏆</h1>
+<h1 align="center"> Projeto Batalha Pokémon </h1>
 
 <p align="center">
-  Simulador de batalhas Pokémon em C, desenvolvido como projeto final da disciplina de Programação e Desenvolvimento de Software I na UFMG.  
+  Simulador de batalhas Pokémon em C, desenvolvido como projeto final da disciplina de <strong>Programação e Desenvolvimento de Software I</strong> na UFMG.  
   O programa lê os dados dos times a partir de um arquivo, executa batalhas baseadas em turnos e atributos, e declara o grande campeão.
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/STATUS-Finalizado-green" alt="Badge Status: Finalizado"/>
-  <img src="https://img.shields.io/badge/Linguagem-C-blue" alt="Badge Linguagem: C"/>
-  <img src="https://img.shields.io/badge/Licença-MIT-lightgrey" alt="Badge Licença: MIT"/>
+  <img src="https://img.shields.io/badge/STATUS-Finalizado-green" alt="Status: Finalizado"/>
+  <img src="https://img.shields.io/badge/Linguagem-C-blue" alt="Linguagem: C"/>
+  <img src="https://img.shields.io/badge/Licença-MIT-lightgrey" alt="Licença: MIT"/>
 </p>
 
 <p align="center">
@@ -17,6 +17,7 @@
   <a href="#-tecnologias-utilizadas">Tecnologias</a> •
   <a href="#-como-rodar-o-projeto">Como Rodar</a> •
   <a href="#-estrutura-do-código">Estrutura</a> •
+  <a href="#-exemplo-de-uso">Exemplo</a> •
   <a href="#-licença">Licença</a> •
   <a href="#-autora">Autora</a>
 </p>
@@ -25,26 +26,28 @@
 
 ## 📜 Visão Geral do Projeto
 
-O objetivo deste trabalho foi aplicar conceitos fundamentais da linguagem C para criar uma aplicação funcional e organizada.  
-A simulação inicia com a leitura de um arquivo de entrada (`arquivo.txt`), que contém os Pokémon e seus atributos:
+O objetivo deste trabalho foi aplicar os conceitos fundamentais da linguagem **C** para criar uma aplicação funcional e organizada.  
 
-- **Nome**
-- **Ataque**
-- **Defesa**
-- **Vida**
+A simulação começa com a leitura de um arquivo de entrada (`arquivo.txt`), que define os Pokémon de cada jogador com os seguintes atributos:
+
+- **Nome**  
+- **Ataque**  
+- **Defesa**  
+- **Vida**  
 - **Tipo**
 
-A batalha ocorre em turnos, considerando as vantagens e desvantagens entre tipos. Ataques podem receber **bônus ou penalidade de 20%** no dano.  
+A batalha ocorre em turnos, levando em conta **vantagens e desvantagens entre tipos**. Ataques podem receber **bônus ou penalidade de 20%** no dano.  
+
 Um Pokémon é derrotado quando sua vida chega a zero, e a partida termina quando um dos jogadores perde todos os seus Pokémon.
 
 ---
 
 ## ✨ Funcionalidades
 
-- 🎮 **Batalha por turnos**: gerenciamento completo de ataques, danos e substituições.  
-- 🔥 **Sistema de vantagens de tipo**: tipos (Água, Fogo, Pedra, Elétrico, etc.) afetam o resultado dos confrontos.  
+- 🎮 **Batalha por turnos**: ataques, danos e substituições automáticas.  
+- 🔥 **Sistema de vantagens de tipo**: Água, Fogo, Pedra, Elétrico etc. influenciam no resultado.  
 - 📂 **Entrada via arquivo `.txt`**: configuração flexível dos times.  
-- 📝 **Relatório final**: exibe o vencedor, os sobreviventes e os Pokémon derrotados.  
+- 📝 **Relatório final**: mostra o vencedor, sobreviventes e derrotados.  
 
 ---
 
@@ -60,14 +63,14 @@ Um Pokémon é derrotado quando sua vida chega a zero, e a partida termina quand
 
 ### Pré-requisitos
 
-Ter um compilador C instalado (ex.: **GCC**).
+Um compilador C instalado (ex.: **GCC**).
 
 ```bash
-# Verificar se o GCC está instalado
+# Verificar instalação do GCC
 gcc --version
 ````
 
-### Instalação e Execução
+### Passo a passo
 
 1. Clone o repositório:
 
@@ -81,8 +84,7 @@ gcc --version
    cd ufmg-pds1-tp
    ```
 
-3. Configure o arquivo de entrada `arquivo.txt`.
-   Exemplo de formatação:
+3. Crie ou edite o arquivo `arquivo.txt` com o formato:
 
    ```
    3 2
@@ -109,11 +111,52 @@ gcc --version
 
 ## 🏛️ Estrutura do Código
 
-* **`struct POKEMON`** → modela os atributos de cada criatura.
-* **`float calculaBonus(POKEMON p1, POKEMON p2)`** → calcula bônus/penalidade considerando o tipo.
+* **`struct POKEMON`** → define os atributos de cada criatura.
+* **`float calculaBonus(POKEMON p1, POKEMON p2)`** → aplica bônus/penalidade conforme o tipo.
 * **`int main()`** → ponto de entrada, responsável por:
 
   * Abrir e validar o arquivo de entrada;
   * Carregar os Pokémon em arrays de `structs`;
   * Gerenciar o loop principal da batalha;
   * Exibir os resultados no console.
+
+---
+
+## 🖥️ Exemplo de Uso
+
+```bash
+./batalha_pokemon
+```
+
+Saída esperada (exemplo simplificado):
+
+```
+Turno 1: Squirtle ataca Vulpix (dano: 12)
+Vulpix resistiu! Vida restante: 3
+
+Turno 2: Vulpix ataca Squirtle (dano: 8)
+Squirtle resistiu! Vida restante: 7
+
+...
+
+🏆 Jogador 1 venceu a batalha!
+```
+
+---
+
+## 📝 Licença
+
+Este projeto está sob a licença **MIT**.
+Consulte o arquivo [LICENSE](LICENSE.md) para mais detalhes.
+
+---
+
+## Autora
+
+| [<img src="https://avatars.githubusercontent.com/u/141386151?v=4" width="115px;"/><br><sub>Sophia Vieira</sub>](https://github.com/sophiaevieira) |
+| :-----------------------------------------------------------------------------------------------------------------------------------------------: |
+
+---
+
+```
+```
