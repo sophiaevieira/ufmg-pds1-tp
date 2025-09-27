@@ -32,10 +32,10 @@ Um Pokémon é derrotado quando sua vida chega a zero, e a partida termina quand
 
 ## Funcionalidades
 
-- 🎮 **Batalha por turnos**: ataques, danos e substituições automáticas.  
-- 🔥 **Sistema de vantagens de tipo**: Água, Fogo, Pedra, Elétrico etc. influenciam no resultado.  
-- 📂 **Entrada via arquivo `.txt`**: configuração flexível dos times.  
-- 📝 **Relatório final**: mostra o vencedor, sobreviventes e derrotados.  
+- **Batalha por turnos**: ataques, danos e substituições automáticas.  
+- **Sistema de vantagens de tipo**: Água, Fogo, Pedra, Elétrico etc. influenciam no resultado.  
+- **Entrada via arquivo `.txt`**: configuração flexível dos times.  
+- **Relatório final**: mostra o vencedor, sobreviventes e derrotados.  
 
 ---
 
