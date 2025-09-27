@@ -2,7 +2,7 @@
 
 <p>
   Simulador de batalhas Pokémon em C, desenvolvido como projeto final da disciplina de <strong>Programação e Desenvolvimento de Software I</strong> na UFMG.  
-  O programa lê os dados dos times a partir de um arquivo, executa batalhas baseadas em turnos e atributos, e declara o grande campeão.
+  O programa lê os dados dos times a partir de um arquivo, executa batalhas baseadas em turnos e atributos, e declara o campeão.
 </p>
 
 <p>
