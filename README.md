@@ -1,16 +1,16 @@
-<h1 align="center"> Projeto Batalha Pokémon </h1>
+<h1> Projeto Batalha Pokémon </h1>
 
-<p align="center">
+<p>
   Simulador de batalhas Pokémon em C, desenvolvido como projeto final da disciplina de <strong>Programação e Desenvolvimento de Software I</strong> na UFMG.  
   O programa lê os dados dos times a partir de um arquivo, executa batalhas baseadas em turnos e atributos, e declara o grande campeão.
 </p>
 
-<p align="center">
+<p>
   <img src="https://img.shields.io/badge/STATUS-Finalizado-green" alt="Status: Finalizado"/>
   <img src="https://img.shields.io/badge/Linguagem-C-blue" alt="Linguagem: C"/>
 </p>
 
-<p align="center">
+<p>
   <a href="#-visão-geral-do-projeto">Visão Geral</a> •
   <a href="#-funcionalidades">Funcionalidades</a> •
   <a href="#-tecnologias-utilizadas">Tecnologias</a> •
