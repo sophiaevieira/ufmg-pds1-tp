@@ -127,7 +127,7 @@ Squirtle resistiu! Vida restante: 7
 
 ...
 
-🏆 Jogador 1 venceu a batalha!
+Jogador 1 venceu a batalha!
 ```
 
 ---
