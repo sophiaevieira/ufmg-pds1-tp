@@ -151,12 +151,5 @@ Consulte o arquivo [LICENSE](LICENSE.md) para mais detalhes.
 
 ---
 
-## Autora
-
-| [<img src="https://avatars.githubusercontent.com/u/141386151?v=4" width="115px;"/><br><sub>Sophia Vieira</sub>](https://github.com/sophiaevieira) |
-| :-----------------------------------------------------------------------------------------------------------------------------------------------: |
-
----
-
-```
-```
+| [Sophia Vieira](https://github.com) |
+| :--------------------------------------------------------------------------------------------------------------------------------: |
