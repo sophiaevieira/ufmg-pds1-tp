@@ -10,17 +10,6 @@
   <img src="https://img.shields.io/badge/Linguagem-C-blue" alt="Linguagem: C"/>
 </p>
 
-<p>
-  <a href="#-visão-geral-do-projeto">Visão Geral</a> •
-  <a href="#-funcionalidades">Funcionalidades</a> •
-  <a href="#-tecnologias-utilizadas">Tecnologias</a> •
-  <a href="#-como-rodar-o-projeto">Como Rodar</a> •
-  <a href="#-estrutura-do-código">Estrutura</a> •
-  <a href="#-exemplo-de-uso">Exemplo</a> •
-  <a href="#-licença">Licença</a> •
-  <a href="#-autora">Autora</a>
-</p>
-
 ---
 
 ## Visão Geral do Projeto
