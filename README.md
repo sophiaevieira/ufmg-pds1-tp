@@ -1,4 +1,3 @@
-````markdown
 <h1 align="center">👾 Projeto Batalha Pokémon 🏆</h1>
 
 <p align="center">
