@@ -150,6 +150,7 @@ Este projeto está sob a licença **MIT**.
 Consulte o arquivo [LICENSE](LICENSE.md) para mais detalhes.
 
 ---
+# Autora
 
 | [Sophia Vieira](https://github.com) |
 | :--------------------------------------------------------------------------------------------------------------------------------: |
