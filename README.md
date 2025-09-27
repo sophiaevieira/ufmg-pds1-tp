@@ -1,4 +1,4 @@
-<h1> Projeto Batalha Pokémon </h1>
+<h1> Trabalho Prático - Simulação de Batalha Pokémon </h1>
 
 <p>
   Simulador de batalhas Pokémon em C, desenvolvido como projeto final da disciplina de <strong>Programação e Desenvolvimento de Software I</strong> na UFMG.  
