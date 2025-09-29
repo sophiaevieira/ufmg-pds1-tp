@@ -2,7 +2,7 @@
 
 **Disciplina:** Programação e Desenvolvimento de Software I (DCC-2024/1)  
 **Instituição:** Departamento de Ciência da Computação (DCC) - UFMG  
-**Autor:** Sophia Vieira ([sophiaevieira](https://github.com/sophiaevieira))
+**Autora:** Sophia Vieira ([sophiaevieira](https://github.com/sophiaevieira))
 
 ---
 
