@@ -1,88 +1,73 @@
 # Trabalho Prático - Simulação de Batalha Pokémon
 
-<p align="center">
-  Simulador de batalhas Pokémon em C, desenvolvido como projeto final da disciplina de <strong>Programação e Desenvolvimento de Software I</strong> na UFMG.
-</p>
-
-<p align="center">
-  <img src="https://img.shields.io/badge/STATUS-Finalizado-green" alt="Status: Finalizado"/>
-  <img src="https://img.shields.io/badge/Linguagem-C-blue" alt="Linguagem: C"/>
-  <img src="https://img.shields.io/badge/Compilador-GCC-informational" alt="Compilador: GCC"/>
-</p>
+**Disciplina:** Programação e Desenvolvimento de Software I (DCC-2024/1)  
+**Instituição:** Departamento de Ciência da Computação (DCC) - UFMG  
+**Autor:** Sophia Vieira ([sophiaevieira](https://github.com/sophiaevieira))
 
 ---
 
-## 1. Visão Geral do Projeto
+## 1. Descrição do Projeto
 
-Este projeto consiste na implementação de um simulador de batalhas Pokémon em linguagem C. O programa lê os dados de dois times de Pokémon a partir de um arquivo de texto, executa uma batalha baseada em turnos e, ao final, declara um vencedor com base nos resultados.
+Este projeto consiste na implementação de um simulador de batalhas Pokémon em linguagem C. O programa lê os dados de dois times de Pokémon a partir de um arquivo de texto, executa uma batalha em turnos e, ao final, declara um vencedor com base nos resultados.
 
-O objetivo foi aplicar conceitos fundamentais da linguagem C, como manipulação de arquivos, `structs` e lógica de programação para criar uma aplicação funcional. A simulação implementa um sistema de batalha que considera atributos individuais (ataque, defesa, vida) e um sistema de vantagens e desvantagens entre tipos, que alteram o dano em combate.
+O objetivo foi aplicar conceitos fundamentais da linguagem C, como manipulação de arquivos, `structs`, e lógica de programação para criar uma aplicação funcional e organizada. A simulação implementa um sistema de batalha que considera atributos individuais de cada Pokémon (ataque, defesa, vida) e um sistema de vantagens e desvantagens entre diferentes tipos (elétrico, água, fogo, etc.), que alteram o dano em combate.
 
-## 2. Funcionalidades
+## 2. Funcionalidades Implementadas
 
--   **Leitura de Dados via Arquivo**: Carrega os Pokémon e seus atributos (Nome, Ataque, Defesa, Vida e Tipo) a partir de um arquivo `arquivo.txt`.
--   **Sistema de Batalha por Turnos**: Gerencia uma batalha onde os jogadores atacam alternadamente. O dano é calculado com base no ataque do agressor e na defesa do alvo.
--   **Vantagens e Desvantagens de Tipo**: Aplica um bônus de **+20%** de dano para ataques "super efetivos" e uma penalidade de **-20%** para ataques "não muito efetivos".
--   **Gerenciamento de Batalha**: Acompanha a vida de cada Pokémon, processa as derrotas e avança para o próximo Pokémon do time automaticamente.
--   **Relatório Final Detalhado**: Ao final da simulação, exibe um relatório completo no console, informando o vencedor, os Pokémon sobreviventes e os derrotados.
+* **Leitura de Dados via Arquivo:** O programa carrega os Pokémon e seus atributos (Nome, Ataque, Defesa, Vida e Tipo) a partir de um arquivo de entrada `arquivo.txt`, permitindo a fácil configuração dos times.
+* **Sistema de Batalha por Turnos:** A lógica central do simulador gerencia uma batalha onde os jogadores atacam alternadamente. O dano é calculado com base no ataque do agressor e na defesa do alvo.
+* **Vantagens e Desvantagens de Tipo:** Foi implementado um sistema que aplica um bônus de **+20%** de dano para ataques "super efetivos" (ex: Água vs. Fogo) e uma penalidade de **-20%** para ataques "não muito efetivos" (ex: Fogo vs. Água).
+* **Gerenciamento de Batalha:** O programa acompanha a vida de cada Pokémon, processa as derrotas e substitui automaticamente pelo próximo Pokémon do time. A batalha termina quando um jogador perde todos os seus Pokémon.
+* **Relatório Final Detalhado:** Ao final da simulação, o programa exibe um relatório completo no console, informando o jogador vencedor, a lista de Pokémon sobreviventes e a lista de todos os Pokémon que foram derrotados.
 
 ## 3. Estrutura do Código
 
 O código foi desenvolvido em um único arquivo (`trabalhoVersaoFinal.c`) e utiliza uma estrutura principal para representar os Pokémon.
 
--   **`struct POKEMON`**: Define o modelo para um Pokémon, armazenando seus cinco atributos essenciais.
-    ```c
-    typedef struct {
-        char nome[MAX_TAM];
-        float ataque;
-        float defesa;
-        float vida;
-        char tipo[MAX_TAM];
-    } POKEMON;
-    ```
--   **`float calculaBonus(POKEMON p1, POKEMON p2)`**: Função que determina o dano final com base nos tipos do Pokémon atacante (`p1`) e do defensor (`p2`).
--   **`int main()`**: Ponto de entrada do programa, responsável por toda a orquestração: ler o arquivo, gerenciar o loop da batalha e imprimir os resultados finais.
+* **`struct POKEMON`**: Define o modelo para um Pokémon, armazenando seus cinco atributos essenciais:
+    * `char nome[100]`
+    * `float ataque`
+    * `float defesa`
+    * `float vida`
+    * `char tipo[100]`
+* **`float calculaBonus(POKEMON p1, POKEMON p2)`**: Função que determina o multiplicador de dano com base nos tipos do Pokémon atacante (`p1`) e do defensor (`p2`). Retorna o valor do ataque modificado.
+* **`int main()`**: Ponto de entrada do programa. É responsável por:
+    1.  Abrir e ler o arquivo `arquivo.txt`.
+    2.  Carregar os dados dos Pokémon em arrays de `structs`.
+    3.  Gerenciar o loop principal da batalha, controlando os turnos e os ataques.
+    4.  Calcular o dano, atualizar a vida dos Pokémon e detectar derrotas.
+    5.  Imprimir os resultados finais da batalha no console.
 
-## 4. Como Rodar o Projeto
+## 4. Compilação e Execução
 
 ### Pré-requisitos
 
--   Um compilador C, como o **GCC** (GNU Compiler Collection).
+* Um compilador C, como o **GCC** (GNU Compiler Collection).
+* A ferramenta `make` (opcional, mas recomendada).
 
-### Passo a Passo
+### Compilação
 
-1.  **Clone o repositório:**
-    ```bash
-    git clone [https://github.com/sophiaevieira/ufmg-pds1-tp.git](https://github.com/sophiaevieira/ufmg-pds1-tp.git)
+Na pasta raiz do projeto, execute o seguinte comando para compilar o código:
+
+```bash
+gcc trabalhoVersaoFinal.c -o batalha_pokemon -Wall
+```
+### Execução
+
+1.  **Crie o arquivo de entrada:** Certifique-se de que existe um arquivo chamado `arquivo.txt` no mesmo diretório. O formato deve ser:
+
+    ```
+    <num_pok_jogador1> <num_pok_jogador2>
+    <nome> <ataque> <defesa> <vida> <tipo>
+    ... (pokémons do jogador 1)
+    <nome> <ataque> <defesa> <vida> <tipo>
+    ... (pokémons do jogador 2)
     ```
 
-2.  **Acesse a pasta do projeto:**
-    ```bash
-    cd ufmg-pds1-tp
-    ```
+2.  **Execute o programa:**
 
-3.  **Crie e edite o arquivo `arquivo.txt`**. O arquivo deve estar no mesmo diretório do executável.
-
-    *Exemplo de `arquivo.txt`*:
-    ```
-    3 2
-    Squirtle 10 15 15 agua
-    Vulpix 15 15 15 fogo
-    Onix 5 20 20 pedra
-    Golem 20 5 10 pedra
-    Charmander 20 15 12 fogo
-    ```
-
-4.  **Compile o código:**
-    ```bash
-    gcc trabalhoVersaoFinal.c -o batalha_pokemon -Wall
-    ```
-
-5.  **Execute o simulador:**
     ```bash
     ./batalha_pokemon
     ```
 
-### Exemplo de Saída
-
-Para o `arquivo.txt` de exemplo acima, a saída no console será:
+O programa lerá o `arquivo.txt` e exibirá todo o andamento e o resultado da batalha no terminal.
